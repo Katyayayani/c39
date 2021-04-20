@@ -7,9 +7,18 @@ var distance = 0;
 var database;
 
 var form, player, game;
-
+var track,c1,c2,c3,c4,track1
 var cars, car1, car2, car3, car4;
 
+
+function preload(){
+track=loadImage("images/track.jpg")
+c1=loadImage("images/car1.png")
+c2=loadImage("images/car2.png")
+c3=loadImage("images/car3.png")
+c4=loadImage("images/car4.png")
+track1=loadImage("images/track.png")
+}
 
 function setup(){
   canvas = createCanvas(displayWidth - 20, displayHeight-30);
@@ -27,5 +36,8 @@ function draw(){
   if(gameState === 1){
     clear();
     game.play();
+  }
+  if(gameState===2){
+    game.end();
   }
 }
